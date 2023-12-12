@@ -19,7 +19,6 @@ function Formulario({funcionario, setShow}){
         }else{
             axios.post("https://apiaulas.thiagodev502.repl.co/funcionarios", {nome, cargo, departamento, salario})
             .then(() => {
-                setShow(false)
                 window.location.reload()
             })
         }

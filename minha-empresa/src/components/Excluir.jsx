@@ -4,7 +4,7 @@ import { useState } from "react"
 import { GoTrash } from "react-icons/go";
 import axios from "axios";
 
-function Excluir(id){
+function Excluir({id}){
 
     const [show, setShow] = useState(false)
 
@@ -13,7 +13,7 @@ function Excluir(id){
         .then(() => { 
             location.reload()
         })
-        .cath((error) =>{
+        .cath(() =>{
             console.log("Erro ao excluir")
         })
     }

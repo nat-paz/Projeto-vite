@@ -9,8 +9,10 @@ function Excluir(id){
     const [show, setShow] = useState(false)
 
     function excluirDados(){
-        axios.delete("https://apiaulas.thiagodev502.repl.co/funcionarios" + id)
-        .then(() => { location.reload()})
+        axios.delete("https://apiaulas.thiagodev502.repl.co/funcionarios/" + id)
+        .then(() => { 
+            location.reload()
+        })
         .cath((error) =>{
             console.log("Erro ao excluir")
         })
